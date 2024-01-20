@@ -1,5 +1,7 @@
 import { useState , useEffect } from "react";
 import "./App.css";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 import Login from "./Components/Login";
 import WebcamCapture from "./Components/WebcamCapture";
 import { GoogleLogin } from "@react-oauth/google";
@@ -31,6 +33,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/*" element={<WebcamCapture />} />
       <Route path="/home" element={<WebcamCapture />} />
+      {/* <Route path="/profile" element={<Profile />} /> */}
     </Routes>
     </>
   );
