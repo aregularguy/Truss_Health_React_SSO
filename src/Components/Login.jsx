@@ -1,4 +1,3 @@
-import React from 'react'
 import { GoogleLogin } from '@react-oauth/google';
 import { useGoogleLogin } from "@react-oauth/google";
 import sharedvideo from '../assets/sharedvideo.mp4';
@@ -19,7 +18,7 @@ const Login = () => {
         })
         console.log("User data:", userData.data);
         localStorage.setItem('user', JSON.stringify(userData));
-        const { sub, name, picture } = userData.data;
+        const { sub, name } = userData.data;
         console.log("response is" , sub + " " , name);
         
         navigate('/home')
